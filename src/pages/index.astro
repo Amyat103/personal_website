@@ -4,6 +4,10 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug"
 
+import screenshot_plate1 from '/screenshot_plate1.png';
+import space_bot from '/space_bot.png';
+import job_scraper from '/job_scraper.png';
+
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const last_posts = posts.slice(0, 3);
@@ -35,27 +39,27 @@ const last_posts = posts.slice(0, 3);
   </div>
 
   <HorizontalCard
-    title="PlateCritique"
-    img="/screenshot_plate1.png"
-    desc="Food Critique website, it's a fullstack application deployed on railway. Used React for frontend, Express and Node.js for backend, and MongoDB for database"
-    url="https://platecritique.up.railway.app/"
-    badge="NEW"
+  title="PlateCritique"
+  img="/screenshot_plate1.png"  // Use direct URL path
+  desc="Food Critique website, it's a fullstack application deployed on railway. Used React for frontend, Express and Node.js for backend, and MongoDB for database"
+  url="https://platecritique.up.railway.app/"
+  badge="NEW"
   />
-  <div class="divider my-0"></div>
   <HorizontalCard
     title="Reddit Space Bot"
-    img="/space_bot.png"
+    img="/space_bot.png"  // Use direct URL path
     desc="Developed a Reddit bot that autonomously posts the latest NASA news and images with key developments in space exploration and scientific discoveries"
     url="https://github.com/Amyat103/Reddit_Space_Bot"
   />
-  <div class="divider my-0"></div>
   <HorizontalCard
     title="Job Scraper"
-    img="/job_scraper.png"
+    img="/job_scraper.png"  // Use direct URL path
     desc="Created a specialized automated program to extract and scrapes job listings from indeed.com to streamline the search process and assist job seekers in the job market"
     url="https://github.com/Amyat103/Job_Scraper"
     badge=""
   />
+
+
 <!--
   <div>
     <div class="text-3xl w-full font-bold mb-5 mt-10">Remove prob</div>
