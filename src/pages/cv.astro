@@ -9,8 +9,22 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
 
   <div class="mb-10 text-justify">
-    About me.
+    <a href="https://drive.google.com/file/d/1n1FWk228rSPTy-0kmURULK9ydCEQ44ES/view?usp=sharing" class="custom-link" target="_blank">Click here</a> to view my resume!
+    <br>
+    <p></p>
   </div>
+
+  <style>
+  .custom-link {
+      color: blue;
+      text-decoration: underline;
+  }
+
+  .custom-link:visited {
+      color: blue;
+      text-decoration: underline;
+  }
+  </style>
 
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Education</div>
@@ -33,37 +47,22 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Logistic Assistant Internship"
+      subtitle="From Sep 2021 to Jun 2022 at Myanmar Foreign Economic And Technology Cooperation Co., Ltd, Yangon, Myanmar"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      • Communicated weekly with international suppliers and buyers on prices, network, and materials <br>
+      • Assisted the accounting team by processing high-volume orders and ensuring accurate shipping and delivery <br>
+      • Organized and handled all documents, contracts, and order slips through Excel to streamline data management and ensure efficient record-keeping
     </TimeLineElement>
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Marketing Internship"
+      subtitle="From April 2020 to Aug 2021 at Bagan Soft Drinks, Yangon, Myanmar"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      • Led the strategic repackaging of products by leveraging customer research and distributor feedback, resulting in enhanced product presentations that aligned closely with customer preferences and market trends <br>
+      • Negotiated with vendors resulting in more brand awareness throughout the region <br>
+      • Created and presented a prizes and reward marketing campaign for customers which increased sales by 16%
     </TimeLineElement>
   </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certifications</div>
-  </div>
-
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-  </ul>
 
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Skills</div>
@@ -84,6 +83,6 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <li>MongoDB</li>
     <li>Pandas</li>
     <li>Git</li>
-    <li>Bash</li>
+    <li>PostgreSQL</li>
   </ul>
 </BaseLayout>
