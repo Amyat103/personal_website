@@ -16,11 +16,21 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
-      - name: Install, build, and upload your site
-        uses: withastro/action@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 20
-          package-manager: pnpm@latest
+      - name: Install pnpm
+        run: npm install -g pnpm
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build the site
+        run: pnpm run build
+      - name: Upload artifacts for deployment
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: build
 
   deploy:
     needs: build
@@ -29,6 +39,12 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+          path: build
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
