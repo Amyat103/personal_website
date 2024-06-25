@@ -25,7 +25,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Build the site
-        run: pnpm run build
+        run: pnpm run build | tee build-log.txt
+      - name: Print build log
+        run: cat build-log.txt
       - name: List all files in root for debugging
         run: ls -la
       - name: List all files in the project directory for debugging
