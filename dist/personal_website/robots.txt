@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amyat103.github.io/personal_website/sitemap.xml
