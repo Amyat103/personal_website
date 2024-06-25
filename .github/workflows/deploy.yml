@@ -26,8 +26,10 @@ jobs:
         run: pnpm install
       - name: Build the site
         run: pnpm run build
-      - name: List files in root for debugging
+      - name: List all files in root for debugging
         run: ls -la
+      - name: List all files in the project directory for debugging
+        run: find .
       - name: List files in dist for debugging
         run: ls -la dist
       - name: Upload artifacts for deployment
