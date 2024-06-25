@@ -26,6 +26,10 @@ jobs:
         run: pnpm install
       - name: Build the site
         run: pnpm run build
+      - name: List files in root for debugging
+        run: ls -la
+      - name: List files in dist for debugging
+        run: ls -la dist
       - name: Upload artifacts for deployment
         uses: actions/upload-artifact@v4
         with:
@@ -45,7 +49,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: github-pages
-      - name: List files for debugging
+      - name: List files for debugging after download
         run: ls -la dist
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
