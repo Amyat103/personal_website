@@ -3,12 +3,12 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 
+// https://astro.build/config
 export default defineConfig({
-  site:
-    process.env.NODE_ENV === 'production'
-      ? 'https://Amyat103.github.io/personal_website/'
-      : 'http://localhost:3000',
-  base: process.env.NODE_ENV === 'production' ? '/personal_website/' : '/',
-  outDir: './docs',
+  site: 'https://amyat103.github.io/personal_website',
+  base: '/personal_website/',
   integrations: [mdx(), sitemap(), tailwind()],
+  build: {
+    outDir: 'docs',
+  },
 });

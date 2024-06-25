@@ -2,11 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
-import createSlug from "../lib/createSlug"
-
-import screenshot_plate1 from '/screenshot_plate1.png';
-import space_bot from '/space_bot.png';
-import job_scraper from '/job_scraper.png';
+import createSlug from "../lib/createSlug";
 
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
@@ -20,13 +16,9 @@ const last_posts = posts.slice(0, 3);
     <div class="text-3xl py-3 font-bold">Software Engineer and student studying at Boston University</div>
     <a href="https://drive.google.com/file/d/1n1FWk228rSPTy-0kmURULK9ydCEQ44ES/view?usp=sharing" class="custom-link" target="_blank">Click here</a> to view my resume!
     <div class="py-2">
-      <text class="text-lg">
-        Contact Me:
-      </text>
+      <text class="text-lg">Contact Me:</text>
       <br>
-      <text class="text-lg">
-        amyat@bu.edu
-      </text>
+      <text class="text-lg">amyat@bu.edu</text>
       <br>
       <br>
       <a class="btn" href="https://www.linkedin.com/in/davidmyat/" target="_blank"> LinkedIn</a>
@@ -39,58 +31,35 @@ const last_posts = posts.slice(0, 3);
   </div>
 
   <HorizontalCard
-    title="PlateCritique"
-    img="/public/screenshot_plate1.png"
-    desc="Food Critique website, it's a fullstack application deployed on railway. Used React for frontend, Express and Node.js for backend, and MongoDB for database"
-    url="https://platecritique.up.railway.app/"
-    badge="NEW"
+  title="PlateCritique"
+  img="/personal_website/screenshot_plate1.png"
+  desc="Food Critique website, it's a fullstack application deployed on railway. Used React for frontend, Express and Node.js for backend, and MongoDB for database"
+  url="https://platecritique.up.railway.app/"
+  badge="NEW"
   />
   <HorizontalCard
     title="Reddit Space Bot"
-    img="/public/space_bot.png" 
+    img="/personal_website/space_bot.png"
     desc="Developed a Reddit bot that autonomously posts the latest NASA news and images with key developments in space exploration and scientific discoveries"
     url="https://github.com/Amyat103/Reddit_Space_Bot"
   />
   <HorizontalCard
     title="Job Scraper"
-    img="/public/job_scraper.png" 
+    img="/personal_website/job_scraper.png"
     desc="Created a specialized automated program to extract and scrapes job listings from indeed.com to streamline the search process and assist job seekers in the job market"
     url="https://github.com/Amyat103/Job_Scraper"
     badge=""
   />
-
-
-<!--
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Remove prob</div>
-  </div>
-
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + createSlug(post.data.title, post.slug)}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
--->
 </BaseLayout>
 
 <style>
   .custom-link {
-      color: blue;
-      text-decoration: underline;
+    color: blue;
+    text-decoration: underline;
   }
 
   .custom-link:visited {
-      color: blue;
-      text-decoration: underline;
+    color: blue;
+    text-decoration: underline;
   }
-  </style>
+</style>
