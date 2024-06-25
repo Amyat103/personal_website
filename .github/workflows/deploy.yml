@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: build
-          path: build
+          path: dist
 
   deploy:
     needs: build
@@ -45,6 +45,6 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build
-          path: build
+          path: dist
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
